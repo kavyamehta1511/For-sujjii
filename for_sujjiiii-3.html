@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sujjiiiii 🎀</title>
+<style>
+:root{--pink:#ffd9e8;--hot:#e86b9a;--deep:#a83e6b;--cream:#fff9fc;--text:#6f3b52}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family: "Trebuchet MS", system-ui, sans-serif;color:var(--text);background:radial-gradient(circle at 20% 10%,#fff 0 4%,transparent 5%),linear-gradient(145deg,#fff0f6,#ffe0ec 55%,#fff7fb);overflow-x:hidden}
+main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 16px;position:relative}
+.card{width:min(100%,440px);text-align:center;background:rgba(255,255,255,.78);border:1px solid #fff;box-shadow:0 18px 55px #c95d8730;border-radius:30px;padding:28px 22px 30px;position:relative;z-index:1;backdrop-filter:blur(8px)}
+.bow{font-size:2.4rem;line-height:1;margin-bottom:12px;filter:drop-shadow(0 4px 3px #d56b9630)}
+h1{font-size:clamp(2rem,8vw,3rem);margin:8px 0;color:var(--deep);letter-spacing:-1px}
+.subtitle{font-size:1rem;line-height:1.6;margin:0 auto 22px;max-width:300px}
+.pill{display:inline-block;border-radius:99px;background:#fff0f6;color:#b14c76;padding:8px 13px;font-size:.83rem;margin-bottom:18px}
+.envelope-wrap{margin:8px auto 18px;width:190px;height:145px;position:relative;cursor:pointer;outline:none}
+.envelope{position:absolute;inset:22px 0 0;background:#f5a9c6;border-radius:8px;box-shadow:0 8px 16px #b34f7520;overflow:hidden}
+.envelope:before{content:"";position:absolute;inset:0;background:#f9c2d6;clip-path:polygon(0 0,50% 58%,100% 0);z-index:3;transition:transform .6s;transform-origin:top}
+.envelope:after{content:"";position:absolute;inset:0;background:#ed8fb2;clip-path:polygon(0 100%,50% 48%,100% 100%);z-index:4}
+.letter-peek{position:absolute;left:15px;right:15px;bottom:25px;height:85px;border-radius:7px;background:#fffafc;box-shadow:0 3px 8px #a83e6b18;transition:transform .6s;z-index:2;display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+.seal{position:absolute;z-index:5;left:50%;top:60%;transform:translate(-50%,-50%);background:#fff1f7;border:2px solid #fff;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;font-size:17px;box-shadow:0 2px 8px #a83e6b25;transition:opacity .3s}
+.envelope-wrap.open .envelope:before{transform:rotateX(180deg);z-index:1}
+.envelope-wrap.open .letter-peek{transform:translateY(-48px)}
+.envelope-wrap.open .seal{opacity:0}
+.tap{font-size:.9rem;color:#ad6683;margin:0 0 20px}
+button{border:0;background:linear-gradient(135deg,#f28ab2,#df5d91);color:white;padding:13px 22px;border-radius:99px;font-size:1rem;font-weight:700;box-shadow:0 7px 18px #df5d9140;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 10px 22px #df5d9145}
+.letter{display:none;text-align:left;margin-top:22px;background:#fffafc;border:1px dashed #f1a5c3;border-radius:20px;padding:22px 20px;line-height:1.75;animation:pop .5s ease}
+.letter.show{display:block}
+.letter h2{text-align:center;color:var(--deep);font-size:1.35rem;margin:0 0 12px}
+.letter p{margin:0 0 12px}
+.signoff{text-align:right;color:#bd5c83;font-weight:700;margin-top:15px}
+.footer{font-size:.78rem;color:#b27891;margin-top:20px}
+.heart{position:fixed;bottom:-30px;z-index:0;pointer-events:none;animation:float 8s linear forwards;opacity:.75}
+.sparkle{position:absolute;color:#ed8ab0;font-size:1.2rem;animation:twinkle 2s ease-in-out infinite alternate}
+.s1{top:35px;left:22px}.s2{right:24px;top:82px;animation-delay:.7s}.s3{bottom:35px;right:35px;animation-delay:1.2s}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@keyframes twinkle{from{transform:scale(.8) rotate(-10deg);opacity:.45}to{transform:scale(1.2) rotate(10deg);opacity:1}}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:380px){.card{padding:24px 16px}.envelope-wrap{transform:scale(.92);margin-top:0;margin-bottom:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <span class="sparkle s1">✧</span><span class="sparkle s2">♡</span><span class="sparkle s3">✦</span>
+  <section class="card">
+    <div class="bow">🎀</div>
+    <span class="pill">a tiny little surprise, just for you</span>
+    <h1>Hey, Sujjiiiii ♡</h1>
+    <p class="subtitle">I made a little corner of the internet to make you smile. 🌷</p>
+    <div class="envelope-wrap" id="envelope" role="button" tabindex="0" aria-label="Open the envelope">
+      <div class="letter-peek">💌</div>
+      <div class="envelope"></div>
+      <div class="seal">♡</div>
+    </div>
+    <p class="tap">tap the envelope to open your letter 🤍</p>
+    <button id="openBtn">Open your little letter 💗</button>
+    <article class="letter" id="letter" aria-live="polite">
+      <h2>A little note for you 🌸</h2>
+      <p>Hiii Sujjiiiii! 🎀</p>
+      <p>I just wanted to remind you that you're genuinely special, and talking to you can make an ordinary day feel a little brighter. 💗</p>
+      <p>I made this tiny website just to put a smile on your face. No pressure to say anything perfect — I just hope it makes you happy. 🫶</p>
+      <p>Keep being your lovely self, okay? You deserve lots of little reasons to smile. 🌷</p>
+      <div class="signoff">— from someone who thinks you're pretty special ♡</div>
+    </article>
+    <div class="footer">made with a little extra pink & lots of care ♡</div>
+  </section>
+</main>
+<script>
+const envelope=document.getElementById('envelope');
+const letter=document.getElementById('letter');
+const button=document.getElementById('openBtn');
+function openLetter(){envelope.classList.add('open');letter.classList.add('show');button.textContent='Your letter is open 💗';button.disabled=true;button.style.opacity='.8';letter.scrollIntoView({behavior:'smooth',block:'nearest'});}
+envelope.addEventListener('click',openLetter);
+envelope.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter();}});
+button.addEventListener('click',openLetter);
+function heart(){const el=document.createElement('div');el.className='heart';el.textContent=['♡','♥','💗','✧'][Math.floor(Math.random()*4)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*18)+'px';el.style.animationDuration=(6+Math.random()*5)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),12000)}
+setInterval(heart,900);
+</script>
+</body>
+</html>
